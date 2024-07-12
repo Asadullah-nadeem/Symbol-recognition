@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbol recognition</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body class="bg-gray-100 font-sans">
+<!-- Navbar -->
+<div class="header bg-purple-600 text-white text-center py-6">
+    <h1 class="text-4xl font-bold">Welcome to Symbol recognition</h1>
+</div>
+
+<div class="main-content p-6">
+    <div class="mdc-card card p-6 bg-white rounded-lg shadow-lg m-4">
+        <h2 class="mdc-typography--headline6 text-2xl font-bold">About Us</h2>
+        <p class="mdc-typography--body1 text-gray-700 mt-2">The proposed project seeks to build a system that can recognize symbols inserted by theuser. This symbol recognition system leverages an image recognition algorithm toprocess images and to identify symbols. First, the system converts RGB objects intograyscale images which is then further converted into black and white images. During the process, image processing is applied to remove unwanted objects andenvironmental interference.
+            The system further uses optical character recognitionfor recognizing the images with 60-80% accuracy.
+            </p>
+    </div>
+
+    <!-- Symbol Recognition Section -->
+    <div class="mdc-card card p-6 bg-white rounded-lg shadow-lg m-4">
+        <h2 class="mdc-typography--headline6 text-2xl font-bold">Symbol Recognition</h2>
+        <input type="file" id="imageInput" accept="image/*" class="block mt-2 mb-4">
+        <canvas id="imageCanvas" class="border mt-2"></canvas>
+    </div>
+    <div class="mdc-card card p-6 bg-white rounded-lg shadow-lg m-4">
+        <p class="mdc-typography--headline6 text-2xl font-bold"
+        >Symbol Text here</p>
+        <p id="outputText" class="mt-4 text-gray-700"></p>
+    </div>
+</div>
+<footer class="bg-purple-600 text-white text-center py-4 mt-6">
+    <p>&copy; 2024. All rights reserved.</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@v2.1.0/dist/tesseract.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
